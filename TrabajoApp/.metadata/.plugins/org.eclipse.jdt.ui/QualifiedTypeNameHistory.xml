@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="sun.jvm.hotspot.oops.java_lang_Class"/>
+    <fullyQualifiedTypeName name="app.dto.PetDto"/>
+    <fullyQualifiedTypeName name="app.dto.ClinicalHistoryDto"/>
+    <fullyQualifiedTypeName name="app.dto.OrderDto"/>
+    <fullyQualifiedTypeName name="app.model.Parther"/>
+    <fullyQualifiedTypeName name="app.dto.PartherDto"/>
+    <fullyQualifiedTypeName name="app.service.Service"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="app.controller.validator.UserValidator"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="app.dto.PersonDto"/>
+    <fullyQualifiedTypeName name="app.dto.UserDto"/>
+</qualifiedTypeNameHistroy>

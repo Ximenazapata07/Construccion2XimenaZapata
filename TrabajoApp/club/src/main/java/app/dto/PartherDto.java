@@ -1,6 +1,6 @@
 package app.dto;
 
-//import java.sql.Date;
+import java.sql.Date;
 
 public class PartherDto {
 	private long id;
@@ -8,7 +8,7 @@ public class PartherDto {
 	private UserDto userId;
 	private long availableFunds;
 	private String subscriptionType;
-	//private Date membersphipDate;
+	private Date membersphipDate;
 	
 	public PartherDto() {}
 
@@ -52,13 +52,13 @@ public class PartherDto {
 		this.subscriptionType = subscriptionType;
 	}
 
-	/*public Date getMembersphipDate() {
+	public Date getMembersphipDate() {
 		return membersphipDate;
 	}
 
 	public void setMembersphipDate(Date membersphipDate) {
 		this.membersphipDate = membersphipDate;
-	}*/
+	}
 	
 	
 }

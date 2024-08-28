@@ -1,6 +1,6 @@
 package app.model;
 
-//import java.sql.Date;
+import java.sql.Date;
 
 public class Parther {
 	private long id;
@@ -8,7 +8,7 @@ public class Parther {
 	private User userId;
 	private long availableFunds;
 	private String subscriptionType;
-	//private Date membersphipDate;
+	private Date membersphipDate;
 	
 	public Parther() {}
 
@@ -52,13 +52,13 @@ public class Parther {
 		this.subscriptionType = subscriptionType;
 	}
 
-	/*public Date getMembersphipDate() {
+	public Date getMembersphipDate() {
 		return membersphipDate;
 	}
 
 	public void setMembersphipDate(Date membersphipDate) {
 		this.membersphipDate = membersphipDate;
-	}*/
+	}
 
 	
 }

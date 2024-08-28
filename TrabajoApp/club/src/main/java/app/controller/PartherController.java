@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import app.controller.validator.PersonValidator;
 import app.controller.validator.UserValidator;
+import app.dto.GuestDto;
 import app.dto.InvoiceDto;
 import app.dto.PersonDto;
 import app.dto.UserDto;
@@ -15,6 +16,7 @@ public class PartherController implements ControllerInterface{
 	private PersonValidator personValidator;
 	private UserValidator userValidator;
 	private InvoiceValidator invoiceValidator;
+	
 	
 	
 	
@@ -54,7 +56,7 @@ public class PartherController implements ControllerInterface{
 	private boolean options(String option) throws Exception {
 		switch (option) {
 		case "1":{
-			this.availableFunds();
+			//this.availableFunds();
 			return true ;
 			
 		}
@@ -67,7 +69,7 @@ public class PartherController implements ControllerInterface{
 			return true;
 		}
 		case "4":{
-			this.removerGuest();
+			//this.removerGuest();
 		}
 		case "5":{
 			System.out.println("Se ha cerrado seccion");
@@ -83,6 +85,7 @@ public class PartherController implements ControllerInterface{
 			
 			
 		}
+	//Este se puede eliminar y utilizar el mismo de Arriba?
 	private boolean menu2() {
 		try {
 			System.out.println(MENU2);
@@ -96,7 +99,7 @@ public class PartherController implements ControllerInterface{
 		}
 		}
 	
-	//ayuda con retornar el get , ayuda para poner el menu principal en la opcion 3 
+	//poner la opcion 3 , aun nose como puedo obtener el saldo 
 	private boolean availableFunds(String opcion2)throws Exception {
 		switch (opcion2) {
 		case "1":{
@@ -118,7 +121,8 @@ public class PartherController implements ControllerInterface{
 				
 	}
 }
-	
+	//cosa que va en el service 
+	/*
 	public void add(long amount) {
 	if(amount>0) {
 		obtenersaldo+= amount;
@@ -126,7 +130,7 @@ public class PartherController implements ControllerInterface{
 		System.out.println("La cantidad debe ser mayor a cero");
 	}
 	
-}
+}*/
 	public void createGuest() throws Exception {
 		System.out.println("Ingrese el nombre del invitado");
 		String name= Utils.getReader().nextLine();
@@ -150,6 +154,13 @@ public class PartherController implements ControllerInterface{
 		userDto.setRole("invitado");
 		userDto.setUserName(userName);
 		userDto.setPassword(password);
+		
+		GuestDto guestDto = new GuestDto();
+		guestDto.setGuestStatus(true);
+		
+		
+		
+		
 		
 		
 	}

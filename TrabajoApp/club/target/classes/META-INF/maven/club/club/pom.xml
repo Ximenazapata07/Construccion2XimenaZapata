@@ -4,4 +4,11 @@
   <artifactId>club</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>club</name>
+  <dependencies>
+	<dependecy>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>8.0.28</version>
+	</dependecy>
+  </dependencies>
 </project>

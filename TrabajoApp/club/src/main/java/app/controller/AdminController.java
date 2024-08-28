@@ -3,7 +3,7 @@ package app.controller;
 
 
 
-//import java.sql.Date;
+import java.sql.Date;
 
 import app.controller.validator.PersonValidator;
 import app.controller.validator.UserValidator;
@@ -101,23 +101,23 @@ public class AdminController implements ControllerInterface {
 		userDto.setUserName(userName);
 	
 		userDto.setPersonId(personDto);
-		PartherDto partnerDto = new PartherDto();
-		//partnerDto.setMembersphipDate(new Date(System.currentTimeMillis()));
-		partnerDto.setUserId(userDto);
-		partnerDto.setAvailableFunds(50000);
-		partnerDto.setSubscriptionType("regulares");
-	
+		PartherDto partherDto = new PartherDto();
+		partherDto.setMembersphipDate(new Date(System.currentTimeMillis()));
+		partherDto.setUserId(userDto);
+		partherDto.setAvailableFunds(50000);
+		partherDto.setSubscriptionType("regulares");
+		
 		
 	}
 
-		private void createPromotion() throws Exception{
+		
 			
 		}
 		
 			
 		
 		
-	}
+	
 	
 	
 	

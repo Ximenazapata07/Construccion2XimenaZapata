@@ -4,7 +4,6 @@
     <fullyQualifiedTypeName name="app.dto.PetDto"/>
     <fullyQualifiedTypeName name="app.dto.ClinicalHistoryDto"/>
     <fullyQualifiedTypeName name="app.dto.OrderDto"/>
-    <fullyQualifiedTypeName name="app.model.Parther"/>
     <fullyQualifiedTypeName name="app.dto.PartherDto"/>
     <fullyQualifiedTypeName name="app.service.Service"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
@@ -15,9 +14,11 @@
     <fullyQualifiedTypeName name="app.dto.UserDto"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="app.controller.ControllerInterface"/>
-    <fullyQualifiedTypeName name="app.model.User"/>
-    <fullyQualifiedTypeName name="app.config.MYSQLConnection"/>
-    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="app.dto.PersonDto"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="app.helpers.Helper"/>
+    <fullyQualifiedTypeName name="app.config.MYSQLConnection"/>
+    <fullyQualifiedTypeName name="app.model.Parther"/>
+    <fullyQualifiedTypeName name="app.model.User"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 </qualifiedTypeNameHistroy>

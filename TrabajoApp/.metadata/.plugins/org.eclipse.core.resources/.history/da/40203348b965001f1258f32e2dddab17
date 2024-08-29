@@ -1,0 +1,27 @@
+package app.dao;
+
+import java.sql.PreparedStatement;
+
+import app.config.MYSQLConnection;
+import app.dao.interfeces.GuestDao;
+import app.dto.GuestDto;
+import app.helpers.Helper;
+import app.model.Guest;
+
+public class GuestDaoImplementation implements GuestDao {
+	@Override
+	public void createGuest(GuestDto guestDto) throws Exception{
+		Guest guest = Helper.parse(guestDto);
+		String query= "INSERT INTO GUEST (USERID,PARTHERID,STATUS) VALUES (?,?,?) ";
+		PreparedStatement preparedStatement =MYSQLConnection.getConnection().preparedStatement(query);
+		preparedStatement.setLong(1, guest.getId());
+		preparedStatement.setLong(2, guest.getPartherId());
+		preparedStatement.setString(2, guest.getGuestStatus());
+		preparedStatement.execute();
+		preparedStatement.close();
+		
+		
+		
+		
+	}
+}

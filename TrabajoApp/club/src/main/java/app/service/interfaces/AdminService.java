@@ -1,8 +1,9 @@
 package app.service.interfaces;
-import app.dto.UserDto;
+
+import app.dto.PartherDto;
 
 public interface AdminService {
-	public void createPather(UserDto userDto) throws Exception;
+	public void createParther(PartherDto partherDto) throws Exception;
 	public void createPromotion() throws Exception;
 	
 	}

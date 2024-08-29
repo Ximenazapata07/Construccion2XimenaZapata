@@ -9,7 +9,7 @@ public class App {
 		ControllerInterface controller = new LoginController();
 		try {
 			controller.session();
-			//MYSQLConnection.getConnection();
+			MYSQLConnection.getConnection();
 		}catch (Exception e) {
 			System.out.println(e.getMessage());
 		}

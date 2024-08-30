@@ -85,6 +85,15 @@ public class PartherController implements ControllerInterface{
 			
 			
 		}
+	@Override 
+	public void session2() throws Exception{
+		boolean session2=true;
+		while(session2) {
+			session2=menu2();
+		}
+	}
+
+	
 	//Este se puede eliminar y utilizar el mismo de Arriba?
 	private boolean menu2() {
 		try {
@@ -104,7 +113,7 @@ public class PartherController implements ControllerInterface{
 		switch (opcion2) {
 		case "1":{
 			System.out.println("saldo actual: "+ obtenersaldo());
-			break;
+			return true;
 		}
 		case"2":{
 			System.out.println("Ingresa la cantidad a agragar : $");
@@ -112,11 +121,16 @@ public class PartherController implements ControllerInterface{
 			
 			obtenersaldo.add(amount);
 			System.out.println("Fondos agregados exitosamente.");
-			break;
+			return true;
+			
+		}
+		case"3":{
+			this.menu();
+			return false;
 		}
 		default:
 			System.out.println("Ingrese una opcion valida");
-			break;
+			return true;
 			
 				
 	}

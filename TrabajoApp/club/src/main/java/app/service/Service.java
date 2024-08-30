@@ -49,7 +49,7 @@ public class Service implements LoginService,AdminService,PartherService{
 	}
 	@Override
 	public void createParther(PartherDto partherDto) throws Exception{
-		this.createUser(partherDto.getUserId());
+		this.userDao.createUser(partherDto.getUserId());
 		UserDto userDto= userDao.findByUserName(partherDto.getUserId());
 		partherDto.setUserId(userDto);
 		try {

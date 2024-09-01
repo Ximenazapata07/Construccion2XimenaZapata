@@ -18,7 +18,7 @@ public class PartherDaoImplementation implements PartherDao {
 	@Override 
 	public void createParther(PartherDto partherDto ) throws Exception{
 		Parther parther = Helper.parse(partherDto);
-		String query= "INSERT INTO PARTHER(USERID,AMOUNT,TYPE,CREATIONDATE)VALUES(?,?,?,?)";
+		String query= "INSERT INTO PARTNER(USERID,AMOUNT,TYPE,CREATIONDATE)VALUES(?,?,?,?)";
 		PreparedStatement preparedStatement = MYSQLConnection.getConnection().prepareStatement(query);
 		preparedStatement.setLong(1, parther.getUserId().getId());
 		preparedStatement.setLong(2, parther.getAvailableFunds());
@@ -31,7 +31,7 @@ public class PartherDaoImplementation implements PartherDao {
 	@Override 
 	public void deleteParther(PartherDto partherDto) throws Exception{
 		Parther parther= Helper.parse(partherDto);
-		String query = "DELETE FROM PARTHER WHERE USERID = ?";
+		String query = "DELETE FROM PARTNER WHERE USERID = ?";
 		PreparedStatement preparedStatement = MYSQLConnection.getConnection().prepareStatement(query);
 		preparedStatement.setLong(1, parther.getUserId().getId());
 		preparedStatement.execute();
@@ -41,7 +41,7 @@ public class PartherDaoImplementation implements PartherDao {
 	
 	@Override
 	public PartherDto existById(UserDto userDto) throws Exception{
-		String query = "SELECT ID,USERID,AMOUNT,TYPE,CREATIONDATE FROM PARTHER WHERE USERID =?";
+		String query = "SELECT ID,USERID,AMOUNT,TYPE,CREATIONDATE FROM PARTNER WHERE USERID =?";
 		PreparedStatement preparedStatement = MYSQLConnection.getConnection().prepareStatement(query);
 		preparedStatement.setLong(1, userDto.getId());
 		ResultSet resulSet = preparedStatement.executeQuery();

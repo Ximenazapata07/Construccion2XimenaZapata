@@ -8,6 +8,8 @@ import app.dto.GuestDto;
 import app.dto.InvoiceDto;
 import app.dto.PersonDto;
 import app.dto.UserDto;
+import app.service.Service;
+import app.service.interfaces.PartherService;
 import app.controller.validator.InvoiceValidator;
 
 
@@ -16,16 +18,18 @@ public class PartherController implements ControllerInterface{
 	private PersonValidator personValidator;
 	private UserValidator userValidator;
 	private InvoiceValidator invoiceValidator;
+	private PartherService service;
 	
 	
 	
 	
-	private static final String MENU= "ingrese la opcion que desea \n 1.Para consultar e incrementar tus fondos  \n 2. Para realizar pedidos\n 3. Para crear invitados \n 4. Desactivar invitados \n 5.cerrar sesion ";
+	private static final String MENU= "ingrese la opcion que desea \n 1.Para consultar tus fondos  \n 2. Para realizar pedidos\n 3. Para crear invitados \n 4. Desactivar invitados \n  5.cerrar sesion ";
 	private static final String MENU2= "Ingrese la opcion que desea \n 1. para consultar fondos \n 2. para incremento de fondos \n 3. para volver al menu principal";
 	public PartherController() {
 		this.personValidator= new PersonValidator();
 		this.userValidator = new UserValidator();
 		this.invoiceValidator= new InvoiceValidator();
+		this.service = new Service();
 		
 		
 		
@@ -85,16 +89,10 @@ public class PartherController implements ControllerInterface{
 			
 			
 		}
-	@Override 
-	public void session2() throws Exception{
-		boolean session2=true;
-		while(session2) {
-			session2=menu2();
-		}
-	}
+
 
 	
-	//Este se puede eliminar y utilizar el mismo de Arriba?
+	
 	private boolean menu2() {
 		try {
 			System.out.println(MENU2);
@@ -110,16 +108,20 @@ public class PartherController implements ControllerInterface{
 	
 	//poner la opcion 3 , aun nose como puedo obtener el saldo 
 	private boolean availableFunds(String opcion2)throws Exception {
+		boolean session2=true;
+		while(session2) {
+			session2=menu2();
+		}
 		switch (opcion2) {
 		case "1":{
-			System.out.println("saldo actual: "+ obtenersaldo());
+			//System.out.println("saldo actual: "+ obtenersaldo());
 			return true;
 		}
 		case"2":{
 			System.out.println("Ingresa la cantidad a agragar : $");
-			long amount= Scanner.nextlong();
+			//long amount= Scanner.nextlong();
 			
-			obtenersaldo.add(amount);
+			//obtenersaldo.add(amount);
 			System.out.println("Fondos agregados exitosamente.");
 			return true;
 			
@@ -151,6 +153,9 @@ public class PartherController implements ControllerInterface{
 		personValidator.validName(name);
 		System.out.println("Ingrese el documento del invitado");
 		long document= personValidator.validDocument(Utils.getReader().nextLine());
+		System.out.println("Ingrese el numero de telefono del invitado");
+		long cellnumber= personValidator.validCellnumber(Utils.getReader().nextLine());
+		
 		
 		System.out.println("Ingrese el nombre de usuario del invitado");
 		String userName=Utils.getReader().nextLine();
@@ -163,22 +168,29 @@ public class PartherController implements ControllerInterface{
 		PersonDto personDto =new PersonDto();
 		personDto.setName(userName);
 		personDto.setDocument(document);
+		personDto.setCellnumber(cellnumber);
+		
+		
 		
 		UserDto userDto = new UserDto();
-		userDto.setRole("invitado");
+		userDto.setRole("guest");
+		userDto.setPersonId(personDto);
 		userDto.setUserName(userName);
 		userDto.setPassword(password);
 		
+		
 		GuestDto guestDto = new GuestDto();
 		guestDto.setGuestStatus(true);
-		
-		
+		guestDto.setUserId(userDto);
+	
+		this.service.createGuest(guestDto);
+		System.out.println("Usuario creado exitosamente");
 		
 		
 		
 		
 	}
-	//Para la facturacion como poner los id, y el estado de pago 
+	
 	
 	public void billing () throws Exception{
 		System.out.print("Descripcion de los productos");
@@ -196,7 +208,7 @@ public class PartherController implements ControllerInterface{
 		
 	}
 	
-	// necesito ayuda a como eliminar un guest 
+	
 	
 	
 	

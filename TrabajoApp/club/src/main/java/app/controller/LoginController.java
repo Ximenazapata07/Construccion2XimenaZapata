@@ -21,11 +21,11 @@ public class LoginController implements ControllerInterface {
 		this.service= new Service();
 		ControllerInterface adminController = new AdminController();
 		ControllerInterface partherController = new PartherController();
-		//ControllerInterface guestController = new GuestController();
+		ControllerInterface guestController = new GuestController();
 		this.roles= new HashMap<String,ControllerInterface>();
 		roles.put("admin", adminController);
-		roles.put("socio", partherController);
-		//roles.put("invitado",guestController);
+		roles.put("parther", partherController);
+		roles.put("guest",guestController);
 		
 	}
 	@Override
@@ -84,7 +84,7 @@ public class LoginController implements ControllerInterface {
 		userDto.setUserName(userName);
 		this.service.Login(userDto);
 		if (roles.get(userDto.getRole())==null) {
-			throw new Exception ("Rol invatido");
+			throw new Exception ("Rol invalido");
 			
 		}
 		roles.get(userDto.getRole()).session();

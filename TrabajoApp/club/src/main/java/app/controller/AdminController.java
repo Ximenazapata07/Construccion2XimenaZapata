@@ -107,13 +107,17 @@ public class AdminController implements ControllerInterface {
 		partherDto.setUserId(userDto);
 		partherDto.setAvailableFunds(50000);
 		partherDto.setSubscriptionType("regulares");
+		this.service.createParther(partherDto);
+		System.out.println("Se ha creado el usuario exitosamente");
 		
+	}
+	
 		
 	}
 
 		
 			
-		}
+		
 		
 			
 		

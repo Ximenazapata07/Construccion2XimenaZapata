@@ -9,5 +9,4 @@ public interface PartherDao {
 	public PartherDto existById(UserDto userDto) throws Exception;
 	public void deleteParther(PartherDto partherDto) throws Exception;
 	
-	
 }

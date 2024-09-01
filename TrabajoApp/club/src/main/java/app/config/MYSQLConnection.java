@@ -13,7 +13,7 @@ public class MYSQLConnection {
 	public static Connection getConnection() {
 		Connection connection =null;
 		try {
-			Class.forName("com.msql.cj.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			connection =DriverManager.getConnection(URL,USER,PASSWORD);
 			System.out.println("Conexión exitosa");
 			

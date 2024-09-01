@@ -54,6 +54,7 @@ public abstract class Helper {
 		partherDto.setSubscriptionType(parther.getSubscriptionType());
 		partherDto.setAvailableFunds(parther.getAvailableFunds());
 		partherDto.setMembersphipDate(parther.getMembersphipDate());
+		partherDto.setUserId(parse(parther.getUserId()));
 		return partherDto;
 		
 	}
@@ -64,6 +65,7 @@ public abstract class Helper {
 		parther.setSubscriptionType(partherDto.getSubscriptionType());
 		parther.setAvailableFunds(partherDto.getAvailableFunds());
 		parther.setMembersphipDate(partherDto.getMembersphipDate());
+		parther.setUserId(parse(partherDto.getUserId()));
 		return parther;
 		
 	}

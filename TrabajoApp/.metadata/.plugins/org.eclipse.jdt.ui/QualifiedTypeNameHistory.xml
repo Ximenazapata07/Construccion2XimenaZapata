@@ -11,14 +11,14 @@
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="app.controller.validator.UserValidator"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="app.dto.UserDto"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="app.controller.ControllerInterface"/>
     <fullyQualifiedTypeName name="app.dto.PersonDto"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
-    <fullyQualifiedTypeName name="app.helpers.Helper"/>
     <fullyQualifiedTypeName name="app.config.MYSQLConnection"/>
     <fullyQualifiedTypeName name="app.model.Parther"/>
     <fullyQualifiedTypeName name="app.model.User"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="app.helpers.Helper"/>
+    <fullyQualifiedTypeName name="app.dto.UserDto"/>
 </qualifiedTypeNameHistroy>

@@ -1,5 +1,0 @@
-package app.dao.interfeces;
-
-public class GuestDto {
-
-}

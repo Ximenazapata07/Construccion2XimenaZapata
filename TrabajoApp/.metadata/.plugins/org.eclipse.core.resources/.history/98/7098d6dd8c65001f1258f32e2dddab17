@@ -1,6 +1,0 @@
-package app.dao.interfeces;
-
-public class GuestDao {
-	public existById(GuestDao guestDto) throws Exception;
-	
-}

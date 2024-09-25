@@ -1,7 +1,0 @@
-package app.dao.interfaces;
- import app.dto.PersonDto;
-public interface PersonDao {
-	public boolean existsByDocument(PersonDto personDto) throws Exception;
-	
-
-}

@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>club</groupId>
   <artifactId>club</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0</version>
   <name>club</name>
   <dependencies>
 	<dependency>
